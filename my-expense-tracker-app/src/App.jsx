@@ -1,8 +1,9 @@
 import './App.css'
-import { useExpense } from './hooks/useExpenses';
+import { CATEGORIES, useExpense } from './hooks/useExpenses';
 import ExpenseForm from './components/ExpenseForm'
-import ExpenseList from './components/ExpenseList';
-import PieChartGraph from './components/PieChartGraph';
+import ExpenseChart from './components/ExpenseChart';
+import ExpenseSummary from './components/ExpenseSummary';
+import ExpenseList from './components/ExpenseList'
 export default function App() {
    const { expenses,AddExpenses,deleteExpenses } = useExpense();
   
@@ -19,7 +20,16 @@ export default function App() {
             <ExpenseList expenses={expenses} deleteExpenses={deleteExpenses} />
            </section>
             <section>
-              <PieChartGraph expenses={expenses}/>
+               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 m-15">
+              <div className="bg-white p-6 rounded-lg shadow-xl ">
+                  <h2 className="text-2xl font-semibold mb-4 text-indigo-500  text-center pb-2">Spending Summary</h2>
+                  <ExpenseSummary expenses={expenses} categories={CATEGORIES} />
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-xl">
+                  <h2 className="text-2xl font-semibold mb-4 text-indigo-500 text-center pb-2">Category Chart</h2>
+                  <ExpenseChart expenses={expenses} categories={CATEGORIES} /> 
+              </div>
+          </div>
              </section>
        </main>
        <footer><p className='text-md md:text-lg mt-10 bg-gray-400 text-center text-white lg:text-2xl p-5'>Optimize your budget and reach your goals faster with our smart tracking features</p></footer>
