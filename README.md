@@ -1,37 +1,18 @@
-# react-expense tracker
-# 💰 Smart Expense Tracker (React + Tailwind CSS)
+# React + Vite
 
-An intuitive and modern application built with **ReactJS** and styled using **Tailwind CSS** for tracking, analyzing, and visualizing personal daily expenses. Data persistence is handled via the browser's `localStorage`.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## ✨ Key Features
+Currently, two official plugins are available:
 
-* **Expense Management (CRUD):** Easily add, view, and delete expense entries.
-* **Persistent Storage:** All expense data is saved locally using `localStorage`, ensuring data remains available between browser sessions.
-* **Advanced Filtering & Sorting:** Filter expenses by category, date range, and sort by highest amount or most recent entry.
-* **Category-wise Analysis:** Automatically calculates and displays total spending per category.
-* **Data Visualization:** Uses Recharts to display a dynamic Pie Chart showing the distribution of spending across all categories.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🛠️ Tech Stack
+## React Compiler
 
-| Category | Technology | Description |
-| :--- | :--- | :--- |
-| **Frontend** | **React.js** | Library for building the user interface. |
-| **Styling** | **Tailwind CSS** | Utility-first framework for rapid and consistent styling. |
-| **Charting** | **Recharts** | A composable charting library built on React components. |
-| **State/Data** | **React Hooks** | Utilizes `useState`, `useEffect`, and `useMemo` for state management, persistence, and performance optimization.  |
-| **Persistence**| **`localStorage`** | Browser API used to store and retrieve expense data locally. |
+The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
 
-## 🚀 Getting Started
+Note: This will impact Vite dev & build performances.
 
-Follow these steps to set up the project locally.
+## Expanding the ESLint configuration
 
-### Prerequisites
-
-* Node.js (v14+) and npm (or yarn)
-
-
-The application should open automatically in your browser at `http://localhost:3000`.
-
-## 📂 Project Structure
-
-The application is structured around clear, domain-specific components and utility files:
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
